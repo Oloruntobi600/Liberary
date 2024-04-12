@@ -15,6 +15,9 @@ public class Member {
         this.memberId = memberId;
         borrowedBooks = new ArrayList<>();
     }
+    public  Member(){
+
+    }
 
     public void getMemberList(List<Member>membersList){
         for (int i = 0; i<membersList.size(); i++){

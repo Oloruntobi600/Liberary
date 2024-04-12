@@ -22,6 +22,9 @@ public class Library implements Serializable {
         borrowList = new ArrayList<>();
         Library.authorsName = authorsName;
     }
+    public Library(){
+
+    }
 
 //    public void addBook(Book book) {   // method to add a book
 //        bookCollection.add(book);
@@ -132,6 +135,7 @@ public class Library implements Serializable {
     public static List<Book> getBookCollection() {
         return bookCollection;
     }
+
 
     public static void setBookCollection(List<Book> bookCollection) {
         Library.bookCollection = bookCollection;

@@ -16,6 +16,9 @@ public class Book implements Serializable { // i am implementing serializable so
         this.isbn = isbn;
         this.availableCopies = availableCopies;
     }
+    public Book (){
+
+    }
 
     public String getBookTittle() {
         return bookTittle;
