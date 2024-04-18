@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ab7c9bb-052c-419b-8980-0fad78f443f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/LibraryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,22 +73,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookTest.testGetAuthorsName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Library-oop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.BookTest" />
-      <option name="METHOD_NAME" value="testGetAuthorsName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BookTest.testSetBookTittle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Library-oop" />
       <extension name="coverage">
@@ -140,13 +120,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibraryTest.testDisplayNonAvailableBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Library-oop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.LibraryTest" />
+      <option name="METHOD_NAME" value="testDisplayNonAvailableBook" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LibraryTest" />
+        <item itemvalue="JUnit.LibraryTest.testDisplayNonAvailableBook" />
         <item itemvalue="JUnit.BookTest" />
         <item itemvalue="JUnit.BookTest.testToString" />
         <item itemvalue="JUnit.BookTest.testSetBookTittle" />
-        <item itemvalue="JUnit.BookTest.testGetAuthorsName" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +180,8 @@
       <workItem from="1712956842223" duration="4730000" />
       <workItem from="1713002476301" duration="229000" />
       <workItem from="1713122672856" duration="285000" />
-      <workItem from="1713352113199" duration="7388000" />
+      <workItem from="1713352113199" duration="7528000" />
+      <workItem from="1713459743773" duration="772000" />
     </task>
     <servers />
   </component>
@@ -202,11 +199,6 @@
           <line>120</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Library.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/BookTest.java</url>
           <line>8</line>
@@ -216,11 +208,20 @@
           </properties>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/LibraryTest.java</url>
+          <line>20</line>
+          <properties class="org.example.LibraryTest" method="IWantToKnowIfAMemberHasBeenAddedInTheLibrary">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Liberary$LibraryTest.ic" NAME="LibraryTest Coverage Results" MODIFIED="1713458852818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Liberary$LibraryTest.ic" NAME="LibraryTest Coverage Results" MODIFIED="1713469973707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.example.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Liberary$BookTest.ic" NAME="BookTest Coverage Results" MODIFIED="1713459362072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
