@@ -11,7 +11,7 @@ public class Main {
         Book book1 = new Book("Nigeria", "Adeyinka", "SMS", 001, 5);
         Book book2 = new Book("Egypt", "Olufela", "Art", 002, 3);
         Book book3 = new Book("Lagos", "Gbenga", "ECN", 003, 6);
-        Book book4 = new Book("Lagos", "Sola", "ECN", 003, 6);
+        Book book4 = new Book("Ilorin", "Sola", "CHM", 004, 6);
 
         Library.bookCollection.add(book1);
         Library.bookCollection.add(book2);
@@ -21,6 +21,7 @@ public class Main {
         System.out.println("Book: " + book1.getBookTittle() + " has been added to the Library");
         System.out.println("Book: " + book2.getBookTittle() + " has been added to the Library");
         System.out.println("Book: " + book3.getBookTittle() + " has been added to the Library");
+        System.out.println("Book: " + book4.getBookTittle() + " has been added to the Library");
 
 
         System.out.println("2. Testing returning book to the Library");
@@ -124,6 +125,7 @@ public class Main {
         System.out.println( " 12. Method to borrow books to the library");
         System.out.println(Library.borrowList);
     }
+
 }
 
 

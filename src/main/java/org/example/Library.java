@@ -7,14 +7,8 @@ import java.util.List;
 public class Library implements Serializable {
     public static List<Book> bookCollection =new ArrayList<>();
     public static  List<Member> membersList = new ArrayList<>();
-    public static List<BookDto> borrowList = new ArrayList<>(); // data transfer objects
+    public static List<BookDto> borrowList = new ArrayList<>();
     public static String authorsName;
-
-//        public Library(List<Book> bookCollection, List<Member> membersList, String authorsName) {
-//        this.bookCollection = bookCollection;
-//        this.membersList = membersList;
-//        this.authorsName = authorsName;
-//}
 
     public Library(List<Book>bookCollection,List<Member>membersList,List<BookDto>borrowList, String authorsName) {
         bookCollection = new ArrayList<>();
@@ -93,7 +87,9 @@ public class Library implements Serializable {
         for (int i = 0; i < bookCollection.size(); i++) {
             if (bookCollection.get(i).getBookTittle().equals(bookTittle) && bookCollection.get(i).getAuthorsName().equals(authorName)
                     && bookCollection.get(i).getIsbn() == isbn) {
-                System.out.println("Available books " + bookTittle + ", authors name " + authorName + "with isbn number " + isbn);
+                System.out.println("Available books: " + bookTittle);
+                System.out.println("Authors Name: " + authorName);
+                System.out.println("Isbn number: " + isbn);
             }
         }
     }
@@ -163,4 +159,5 @@ public class Library implements Serializable {
                 "authorsName='" + authorsName + '\'' +
                 '}';
     }
+
 }

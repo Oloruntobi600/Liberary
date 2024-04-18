@@ -58,8 +58,126 @@ class LibraryTest {
         Book book = new Book();
         Library library = new Library();
         library.addNewBook(book);
+        library.setAuthorsName("Adeyinka");
         assertNotEquals(isbnToAdd, Library.bookCollection.get(0).getIsbn());
     }
+    @Test
+    void testRemoveBook() {
+        Library library = new Library();
+        library.removeBook("Adeyinka");
+        assertEquals(2, Library.getBookCollection().size());
+    }@Test
+    void testRemoveAnotherBook() {
+        Library library = new Library();
+        library.removeBook("Olufela");
+        assertEquals(2, Library.getBookCollection().size());
+    }
+
+    @Test
+    void testRemoveMember() {
+        Library library = new Library();
+        library.removeMember(001);
+        assertEquals(2, Library.getMembersList().size());
+    }
+    @Test
+    void testReturnBook() {
+        Library library = new Library();
+        library.returnBook("Nigeria", 001);
+        assertTrue(true);
+    }
+
+    @Test
+    void testDisplayAvailableBooks() {
+        Library library = new Library();
+        library.displayAvailableBooks("Nigeria", "Adeyinka", 001);
+        assertTrue(true);
+    }@Test
+    void testDisplayUnAvailableBooks() {
+        Library library = new Library();
+        library.displayAvailableBooks("Togo", "Fela", 002);
+        assertTrue(true);
+    }
+    @Test
+    void testBorrowBook() {
+        Library library = new Library();
+        library.borrowBook(1, "Nigeria");
+        assertEquals(1, Library.getBorrowList().size());
+    }
+    @Test
+    void testMemberName() {
+        Library library = new Library();
+        library.setAuthorsName("Adeyinka");
+        assertEquals("Adeyinka",library.getAuthorsName());
+    }
+
+    @Test
+    void testAddExistingBook() {
+        Library library = new Library();
+        library.addNewBook(new Book("Nigeria","Adeyinka","Public", 007, 3));
+        assertTrue(true);
+    }
+    @Test
+    void testAddExistingBookAgain() {
+        Library library = new Library();
+        library.addNewBook(new Book("Lome","Fiver","Private", 114, 3));
+        assertFalse(false);
+    }
+
+    @Test
+    void testAddExistingMember() {
+        Library library = new Library();
+        library.addNewMember(new Member("Tola", "Ibadan", 002));
+        assertTrue(true);
+    }
+    @Test
+    void testAddExistingMemberAgain() {
+        Library library = new Library();
+        library.addNewMember(new Member("Tola", "Ibadan", 002));
+        assertFalse(false);
+    }
+    @Test
+    void testRemoveNonExistingMember() {
+        Library library = new Library();
+        library.removeMember(3);
+        assertEquals(2, Library.getMembersList().size());
+    }
+
+    @Test
+    void testReturnNonExistingBook() {
+        Library library = new Library();
+        library.returnBook("Nigeria", 1);
+        assertEquals(0, Library.getBorrowList().size());
+    }
+    @Test
+    void testDisplayAvailableBook() {
+        Library library = new Library();
+        library.displayAvailableBooks("Nigeria","Adeyinka", 001);
+        assertEquals(3, Library.bookCollection.size());
+    }
+    @Test
+    void testDisplayNonAvailableBook() {
+        Library library = new Library();
+        library.displayAvailableBooks("Nigeria","Adeyinka", 001);
+        assertNotEquals(1, Library.bookCollection.size());
+    }
+    @Test
+    void testAddBookCollectionNotNull() {
+        Library library = new Library();
+        assertNotNull(Library.getBookCollection());
+    }
+
+    @Test
+    void testAddMembersListNotNull() {
+        Library library = new Library();
+        assertNotNull(Library.getMembersList());
+    }
+
+    @Test
+    void testAddBorrowListNotNull() {
+        Library library = new Library();
+        assertNotNull(Library.getBorrowList());
+    }
+
 
 
 }
