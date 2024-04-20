@@ -122,6 +122,8 @@ public class Main {
         library1.borrowBook(001, "Nigeria");
         library1.borrowBook(002, "Egypt");
         library1.borrowBook(003, "America");
+        library1.borrowBook(004, "Lagos");
+
         System.out.println( " 12. Method to borrow books to the library");
         System.out.println(Library.borrowList);
     }

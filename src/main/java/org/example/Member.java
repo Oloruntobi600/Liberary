@@ -18,26 +18,6 @@ public class Member {
     public  Member(){
 
     }
-
-    public void getMemberList(List<Member>membersList){
-        for (int i = 0; i<membersList.size(); i++){
-            System.out.println(membersList.get(i));
-        }
-    }
-
-    //    public Member(String name, int memberId, List<Book> borrowedBooks) {
-//        Name = name;
-//        this.memberId = memberId;
-//        this.borrowedBooks = borrowedBooks;
-//    }
-
-//        public Member(String name,String address, int memberId) {
-//        Name = name;
-//        this.address= address;
-//        this.memberId = memberId;
-//        borrowedBooks = new ArrayList<>();
-//    }
-
     public String getName() {
         return Name;
     }

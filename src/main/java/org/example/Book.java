@@ -69,4 +69,11 @@ public class Book implements Serializable { // i am implementing serializable so
                 ", availableCopies=" + availableCopies +
                 '}';
     }
+
+    public boolean isAvailableForBorrowing() {
+        return false;
+    }
+
+    public void setAvailableForBorrowing(boolean b) {
+    }
 }

@@ -13,8 +13,9 @@ public class Library implements Serializable {
     public Library(List<Book>bookCollection,List<Member>membersList,List<BookDto>borrowList, String authorsName) {
         bookCollection = new ArrayList<>();
         membersList = new ArrayList<>();
-        borrowList = new ArrayList<>();
+//        borrowList = new ArrayList<>();
         Library.authorsName = authorsName;
+
     }
     public Library(){
 
@@ -95,12 +96,16 @@ public class Library implements Serializable {
     }
 
     public void borrowBook(int memberId, String bookTittle) { // method to borrow books from the library and i have used
+
         for (int i = 0; i < bookCollection.size(); i++) {
-           if (bookCollection.get(i).getBookTittle().equals(bookTittle)) {
-               BookDto book = new BookDto(bookTittle,memberId);
-               borrowList.add(book);
-           }
+            if (bookCollection.get(i).getBookTittle().equals(bookTittle)) {
+                BookDto book = new BookDto(bookTittle, memberId);
+                System.out.println("Adding book to borrowList: " + bookTittle);
+                borrowList.add(book);
+
+            }
         }
+
     }
 
 //    public List<Book> getCollection() {
@@ -146,6 +151,9 @@ public class Library implements Serializable {
     }
 
     public static List<BookDto> getBorrowList() {
+        if (borrowList == null) {
+            borrowList = new ArrayList<>();
+        }
         return borrowList;
     }
 
